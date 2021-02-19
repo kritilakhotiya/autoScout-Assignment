@@ -1,0 +1,15 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                                    controllers.HomeController.index
+
++nocsrf
+POST    /                                    controllers.HomeController.upload()
+
+#  api controllers mapping
+GET     /api/getAggregateListing             controllers.HomeController.getAggregateListing
+GET     /api/getPercentageDistribution       controllers.HomeController.getPercentageDistribution
+GET     /api/getAveragePriceMostContacted    controllers.HomeController.getAveragePriceMostContacted
+GET     /api/getMaxContactedMonthly          controllers.HomeController.getMaxContactedMonthly
